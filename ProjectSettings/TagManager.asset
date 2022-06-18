@@ -41,3 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlacasDePressao
+    uniqueID: 4154517071
+    locked: 0
+  - name: Portas
+    uniqueID: 2240652813
+    locked: 0
+  - name: Paredes
+    uniqueID: 4096223487
+    locked: 0
+  - name: Itens
+    uniqueID: 3891879925
+    locked: 0
+  - name: Monstros
+    uniqueID: 3615744025
+    locked: 0
+  - name: Professor
+    uniqueID: 1097820563
+    locked: 0
+  - name: Projeteis
+    uniqueID: 1303126453
+    locked: 0
+  - name: Gui
+    uniqueID: 2175359505
+    locked: 0
