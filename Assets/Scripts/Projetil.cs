@@ -25,6 +25,7 @@ public class Projetil : MonoBehaviour{
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Monstros"){
+            other.GetComponent<Monstro>().Dano(dano: 1);
             Destroy(gameObject);
         }else if(other.tag == "Itens"){
             other.GetComponent<ItemDestrutivel>().Dano(dano: 1);
