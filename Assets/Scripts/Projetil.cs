@@ -24,13 +24,13 @@ public class Projetil : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "Monstros"){
+        if(other.CompareTag("Monstros")){
             other.GetComponent<Monstro>().Dano(dano: 1);
             Destroy(gameObject);
-        }else if(other.tag == "Itens"){
+        }else if(other.CompareTag("Itens")){
             other.GetComponent<ItemDestrutivel>().Dano(dano: 1);
             Destroy(gameObject);
-        }else if(other.tag == "Paredes"){
+        }else if(other.CompareTag("Paredes")){
             Destroy(gameObject);
         }
     }

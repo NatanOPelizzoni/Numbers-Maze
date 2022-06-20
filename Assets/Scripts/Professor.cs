@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Professor : MonoBehaviour{
 
@@ -51,5 +52,29 @@ public class Professor : MonoBehaviour{
 
             GetComponent<Rigidbody2D>().velocity = NovaVelocidade;
         }
+    }
+
+    public void Vitoria(){
+        transform.Find("VitoriaTexto").gameObject.SetActive(value: true);
+        StartCoroutine(ReiniciaLevelComDelay(3f));
+    }
+
+    public void Derrota(){
+        transform.Find("DerrotaTexto").gameObject.SetActive(value: true);
+
+        {
+            Vivo = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
+        }
+
+        StartCoroutine(ReiniciaLevelComDelay(2f));
+    }
+
+    IEnumerator ReiniciaLevelComDelay(float delay){
+        yield return new WaitForSeconds(delay);
+
+        SceneManager.LoadScene(sceneName: "Level1");
     }
 }
