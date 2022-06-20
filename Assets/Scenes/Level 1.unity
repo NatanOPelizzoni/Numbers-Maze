@@ -11824,7 +11824,7 @@ GameObject:
   - component: {fileID: 1366620341}
   - component: {fileID: 1366620340}
   m_Layer: 0
-  m_Name: DerrotaTexto
+  m_Name: ControlesTexto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19095,6 +19095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4430644330615339602, guid: d5375e95e21646b4ea58480954190d45, type: 3}
+      propertyPath: m_Text
+      value: "PARAB\xC9NS"
+      objectReference: {fileID: 0}
     - target: {fileID: 7533846430333675562, guid: d5375e95e21646b4ea58480954190d45, type: 3}
       propertyPath: m_Name
       value: Professor
@@ -19142,6 +19146,10 @@ PrefabInstance:
     - target: {fileID: 7680738922107236423, guid: d5375e95e21646b4ea58480954190d45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882127003902445880, guid: d5375e95e21646b4ea58480954190d45, type: 3}
+      propertyPath: m_Name
+      value: ParabensTexto
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5375e95e21646b4ea58480954190d45, type: 3}

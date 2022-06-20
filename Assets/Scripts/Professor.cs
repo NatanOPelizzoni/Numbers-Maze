@@ -11,11 +11,13 @@ public class Professor : MonoBehaviour{
     private const float PROJETIL_MAX_INTERVALO = 0.2f;
     private float ProjetilIntervalo;
     private bool Vivo = true;
+    private Scene CenaAtual;
 
 
     // Start is called before the first frame update
     void Start(){
         ProfessorObjeto = this;
+        CenaAtual = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -54,7 +56,7 @@ public class Professor : MonoBehaviour{
         }
 
         if(Input.GetKeyDown(KeyCode.R)){
-            SceneManager.LoadScene(sceneName: "Level1");
+            SceneManager.LoadScene(sceneName: CenaAtual.name);
         }
 
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -83,6 +85,6 @@ public class Professor : MonoBehaviour{
     IEnumerator ReiniciaLevelComDelay(float delay){
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene(sceneName: "Level1");
+        SceneManager.LoadScene(sceneName: CenaAtual.name);
     }
 }
