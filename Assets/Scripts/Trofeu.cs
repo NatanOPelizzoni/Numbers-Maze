@@ -13,7 +13,11 @@ public class Trofeu : MonoBehaviour{
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Professor")){
-            Professor.ProfessorObjeto.Vitoria();
+            if(Professor.ProfessorObjeto.CenaAtual.name == "Level 1"){
+                Professor.ProfessorObjeto.Parabens();
+            }else{
+                Professor.ProfessorObjeto.Vitoria();
+            }
             gameObject.SetActive(value: false);
         }
     }

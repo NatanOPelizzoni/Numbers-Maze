@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Professor : MonoBehaviour{
 
     public static Professor ProfessorObjeto;
+    public Scene CenaAtual;
 
     private const float PROFESSOR_VELOCIDADE = 40;
     private const float PROJETIL_MAX_INTERVALO = 0.2f;
@@ -16,6 +17,7 @@ public class Professor : MonoBehaviour{
     // Start is called before the first frame update
     void Start(){
         ProfessorObjeto = this;
+        CenaAtual = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -54,12 +56,17 @@ public class Professor : MonoBehaviour{
         }
 
         if(Input.GetKeyDown(KeyCode.R)){
-            SceneManager.LoadScene(sceneName: "Level1");
+            SceneManager.LoadScene(sceneName: CenaAtual.name);
         }
 
         if(Input.GetKeyDown(KeyCode.Escape)){
             Application.Quit();
         }
+    }
+
+    public void Parabens(){
+        transform.Find("ParabensTexto").gameObject.SetActive(value: true);
+        StartCoroutine(CompletaLevelComDelay(3f));
     }
 
     public void Vitoria(){
@@ -80,9 +87,15 @@ public class Professor : MonoBehaviour{
         StartCoroutine(ReiniciaLevelComDelay(2f));
     }
 
+    IEnumerator CompletaLevelComDelay(float delay){
+        yield return new WaitForSeconds(delay);
+
+        SceneManager.LoadScene(sceneBuildIndex: CenaAtual.buildIndex+1);
+    }
+
     IEnumerator ReiniciaLevelComDelay(float delay){
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene(sceneName: "Level1");
+        SceneManager.LoadScene(sceneName: CenaAtual.name);
     }
 }
