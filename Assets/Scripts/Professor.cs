@@ -52,6 +52,14 @@ public class Professor : MonoBehaviour{
 
             GetComponent<Rigidbody2D>().velocity = NovaVelocidade;
         }
+
+        if(Input.GetKeyDown(KeyCode.R)){
+            SceneManager.LoadScene(sceneName: "Level1");
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
+        }
     }
 
     public void Vitoria(){
