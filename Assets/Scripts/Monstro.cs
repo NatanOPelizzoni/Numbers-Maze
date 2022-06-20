@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Monstro : MonoBehaviour{
 
@@ -37,6 +39,12 @@ public class Monstro : MonoBehaviour{
             gameObject.SetActive(value: false);
         }else{
             GetComponent<SpriteRenderer>().sprite = Sprites[Vida - 1];
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.CompareTag("Professor")){
+            SceneManager.LoadScene(sceneName: "Level1");
         }
     }
 }
