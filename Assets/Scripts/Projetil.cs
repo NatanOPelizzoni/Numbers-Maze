@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Projetil : MonoBehaviour{
 
-    public float Speed;
-    public float Angle;
+    public float Velocidade;
+    public float Angulo;
 
     private Transform _transform;
 
@@ -19,11 +19,18 @@ public class Projetil : MonoBehaviour{
     }
 
     private void FixedUpdate(){
-        Vector3 velocity = new Vector2(x: Mathf.Cos(Angle), y: Mathf.Sin(Angle)) * Speed;
+        Vector3 velocity = new Vector2(x: Mathf.Cos(Angulo), y: Mathf.Sin(Angulo)) * Velocidade;
         _transform.position = _transform.position + (velocity * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        
+        if(other.tag == "Monstros"){
+            Destroy(gameObject);
+        }else if(other.tag == "Itens"){
+            other.gameObject.SetActive(value: false);
+            Destroy(gameObject);
+        }else if(other.tag == "Paredes"){
+            Destroy(gameObject);
+        }
     }
 }

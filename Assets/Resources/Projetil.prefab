@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4273125404529515184}
   m_Layer: 6
   m_Name: Projetil
-  m_TagString: Untagged
+  m_TagString: Paredes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1303126453
+  m_SortingLayerID: -1684755617
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6faecb267d9942c439785087475bb174, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40a44e1e59ef9f24d8e2b75e8c9d0de4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,3 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c6e7b4d046e304a8da5409862e5a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
+  Angle: 0

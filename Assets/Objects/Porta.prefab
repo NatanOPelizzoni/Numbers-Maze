@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6115140541640165647
+--- !u!1 &4871981891111126952
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6115140541640165651}
-  - component: {fileID: 6115140541640165648}
-  - component: {fileID: 6115140541640165649}
-  - component: {fileID: 6115140541640165646}
+  - component: {fileID: 4871981891111126954}
+  - component: {fileID: 4871981891111126953}
+  - component: {fileID: 4871981891111126955}
   m_Layer: 0
-  m_Name: Mesa
-  m_TagString: Itens
+  m_Name: Porta
+  m_TagString: Paredes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6115140541640165651
+--- !u!4 &4871981891111126954
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6115140541640165647}
+  m_GameObject: {fileID: 4871981891111126952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: -11.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.42, y: 8.01, z: 0}
+  m_LocalScale: {x: 2.3098304, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6115140541640165648
+--- !u!212 &4871981891111126953
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6115140541640165647}
+  m_GameObject: {fileID: 4871981891111126952}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1806729613
-  m_SortingLayer: 4
+  m_SortingLayerID: 333227467
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: edac30ff490bf7e48bad984e60b56c31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e491d646e0a21154fb17b38be905118c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6115140541640165649
+--- !u!61 &4871981891111126955
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6115140541640165647}
+  m_GameObject: {fileID: 4871981891111126952}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -112,24 +111,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 8}
   m_EdgeRadius: 0
---- !u!50 &6115140541640165646
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6115140541640165647}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 4
-  m_LinearDrag: 100
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4

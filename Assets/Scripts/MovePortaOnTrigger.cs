@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePortaOnTrigger : MonoBehaviour{
-    public Transform AffectedObject;
-    public bool ReturnDoorOnRelease;
-    public Vector2 EndPosition;
-    public float Speed;
+    public Transform ObjetoAfetado;
+    public bool RetornoPorta;
+    public Vector2 PosicaoFinal;
+    public float Velocidade;
 
-    private Vector2 StartPosition;
-    private bool PressurePlatePressed;
+    private Vector2 PosicaoInicial;
+    private bool PlacaDePressaoPrecionada;
 
     // Start is called before the first frame update
     void Start(){
-        StartPosition = AffectedObject.position;
+        PosicaoInicial = ObjetoAfetado.position;
     }
 
     // Update is called once per frame
@@ -22,26 +22,26 @@ public class MovePortaOnTrigger : MonoBehaviour{
 
     private void FixedUpdate(){
         if(GetComponent<Collider2D>().IsTouchingLayers(layerMask: 1)){
-            SetPressurePlateState(true);
+            SetEstadoPlacaDePressao(true);
         }else{
-            SetPressurePlateState(false);
+            SetEstadoPlacaDePressao(false);
         }
 
-        if(PressurePlatePressed){
-            AffectedObject.position = Vector2.MoveTowards(current: AffectedObject.position, target: EndPosition, maxDistanceDelta: Speed * Time.fixedDeltaTime);
+        if(PlacaDePressaoPrecionada){
+            ObjetoAfetado.position = Vector2.MoveTowards(current: ObjetoAfetado.position, target: PosicaoFinal, maxDistanceDelta: Velocidade * Time.fixedDeltaTime);
         }else{
-            if(ReturnDoorOnRelease){
-                AffectedObject.position = Vector2.MoveTowards(current: AffectedObject.position, target: StartPosition, maxDistanceDelta: Speed * Time.fixedDeltaTime);
+            if(RetornoPorta){
+                ObjetoAfetado.position = Vector2.MoveTowards(current: ObjetoAfetado.position, target: PosicaoInicial, maxDistanceDelta: Velocidade * Time.fixedDeltaTime);
             }
         }
 
     }
 
-    private void SetPressurePlateState(bool newState){
-        if(PressurePlatePressed != newState){
-            PressurePlatePressed = newState;
+    private void SetEstadoPlacaDePressao(bool NovoEstado){
+        if(PlacaDePressaoPrecionada != NovoEstado){
+            PlacaDePressaoPrecionada = NovoEstado;
 
-            if(PressurePlatePressed){
+            if(PlacaDePressaoPrecionada){
                 transform.Find("Superficie").localPosition = new Vector3(x:0, y:0, z:0);//pressionada
             }else{
                 transform.Find("Superficie").localPosition = new Vector3(x:0, y:0.5f, z:0);//nao pressionada
