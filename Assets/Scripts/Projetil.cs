@@ -27,7 +27,7 @@ public class Projetil : MonoBehaviour{
         if(other.tag == "Monstros"){
             Destroy(gameObject);
         }else if(other.tag == "Itens"){
-            other.gameObject.SetActive(value: false);
+            other.GetComponent<ItemDestrutivel>().Dano(dano: 1);
             Destroy(gameObject);
         }else if(other.tag == "Paredes"){
             Destroy(gameObject);

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6115140541640165648}
   - component: {fileID: 6115140541640165649}
   - component: {fileID: 6115140541640165646}
+  - component: {fileID: 936930204334425874}
   m_Layer: 0
   m_Name: Mesa
   m_TagString: Itens
@@ -133,3 +134,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &936930204334425874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115140541640165647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e043759adbc87843bff4de184402b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VidaMax: 3
+  Sprites:
+  - {fileID: 21300000, guid: 216c91102742e4f48a7ee3c2a68df424, type: 3}
+  - {fileID: 21300000, guid: 08fd93ec115ee334c91204f0da0d3a72, type: 3}
+  - {fileID: 21300000, guid: edac30ff490bf7e48bad984e60b56c31, type: 3}

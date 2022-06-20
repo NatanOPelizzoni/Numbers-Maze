@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1829111891653022279}
   - component: {fileID: 1829111891653022278}
   - component: {fileID: 1829111891653022281}
+  - component: {fileID: 4702866023280910391}
   m_Layer: 0
   m_Name: Cadeira
   m_TagString: Itens
@@ -133,3 +134,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4702866023280910391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829111891653022280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e043759adbc87843bff4de184402b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VidaMax: 3
+  Sprites:
+  - {fileID: 21300000, guid: 2fb7702497f393c4d9126b0f347f346e, type: 3}
+  - {fileID: 21300000, guid: 9eb42b5ba0b0f7f4f808c91ec978f8f2, type: 3}
+  - {fileID: 21300000, guid: f398030bb0a60794b869f6bcd1ca5b5b, type: 3}
