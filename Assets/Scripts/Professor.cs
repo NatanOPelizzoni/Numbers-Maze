@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Professor : MonoBehaviour
-{
+public class Professor : MonoBehaviour{
+
+    public static Professor ProfessorObjeto;
+
     private const float PROFESSOR_VELOCIDADE = 40;
     private const float PROJETIL_MAX_INTERVALO = 0.2f;
     private float ProjetilIntervalo;
@@ -12,6 +14,7 @@ public class Professor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
+        ProfessorObjeto = this;
     }
 
     // Update is called once per frame

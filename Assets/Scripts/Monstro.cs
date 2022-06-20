@@ -8,6 +8,7 @@ public class Monstro : MonoBehaviour{
     public Sprite[] Sprites;
 
     private int Vida;
+    private const float Velocidade = 30;
 
     // Start is called before the first frame update
     void Start(){
@@ -16,6 +17,18 @@ public class Monstro : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+    }
+
+    private void FixedUpdate(){
+        float Distancia = Vector2.Distance(a: Professor.ProfessorObjeto.transform.position, b:transform.position);
+
+        if(Distancia <= 80){
+            float Angulo = Random.Range(-1.5f, 1.5f) + Mathf.Atan2(y: Professor.ProfessorObjeto.transform.position.y - transform.position.y, x: Professor.ProfessorObjeto.transform.position.x - transform.position.x);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(x: Mathf.Cos(Angulo), y: Mathf.Sin(Angulo)) * Velocidade;
+        }else{
+            float Angulo = Random.Range(0, Mathf.PI * 2f);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(x: Mathf.Cos(Angulo), y: Mathf.Sin(Angulo)) * Velocidade;
+        }
     }
 
     public void Dano(int dano){
