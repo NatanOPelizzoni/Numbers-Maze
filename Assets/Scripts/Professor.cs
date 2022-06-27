@@ -75,16 +75,7 @@ public class Professor : MonoBehaviour{
     }
 
     public void Derrota(){
-        transform.Find("DerrotaTexto").gameObject.SetActive(value: true);
-
-        {
-            Vivo = false;
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<Collider2D>().enabled = false;
-            GetComponent<Rigidbody2D>().simulated = false;
-        }
-
-        StartCoroutine(ReiniciaLevelComDelay(2f));
+        SceneManager.LoadScene("GameOver");
     }
 
     IEnumerator CompletaLevelComDelay(float delay){
